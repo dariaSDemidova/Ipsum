@@ -1,0 +1,10 @@
+mixin newsCard(imageSrc, imageAlt, tag, title, date)
+    .news__card.card
+        .news__card-image 
+            img(src=imageSrc, alt=imageAlt)
+        .news__card-text
+            .news__card-tag= tag
+            h5.news__card-title= title
+            .news__card-date= date
+            button.news__card-button Read More
+            

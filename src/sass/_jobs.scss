@@ -1,0 +1,163 @@
+.jobs {
+    padding: 64px 0;
+    background-color: $athens-gray;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    &__info {
+        max-width: 570px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__title {
+        @include h3;
+    }
+    
+    &__text {
+        @include paragraph-regular;
+    }
+
+    &__button {
+        @include button(119px);
+        @include primary-button;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 32px;
+        margin-top: 58px;
+    }
+
+    &__card {
+        width: calc((100% - 64px) / 3);
+        border: 1px solid $gray;
+        padding: 29px;
+        overflow: hidden;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &:hover {
+            outline: 4px solid $royal-blue;
+        }
+
+        &-company {
+            display: flex;
+            gap: 14px;
+
+            &-image {
+                border: 1px solid $gray;
+                width: 56px;
+                height: 56px;
+
+                img {
+                    padding: 12px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+
+            &-title {
+                @include paragraph-regular;
+                font-weight: 500;
+                color: $ebony;
+            }
+
+            &-text {
+                @include paragraph-small;
+                color: $shuttle-gray;
+            }
+        }
+
+        &-title {
+            @include h6;
+        }
+
+        &-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            height: 29px;
+        }
+
+        &-tag.blue {
+            @include badge ($water, $royal-blue);
+        }
+
+        &-tag.peach {
+            @include badge ($seashell-peach, $tussock);
+        }
+
+        &-details {
+            display: flex;
+            gap: 24px;
+            @include font('Inter', 14px, 500, 16.8px, -0.41999998688697815px);
+            text-align: left;
+            color: $shuttle-gray;
+
+            &-city {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background: url('/icons/location.svg');
+                }
+            }
+
+            &-salary {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background: url('/icons/salary.svg');
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 425px) {
+    .jobs {
+        padding: 32px 0;
+    
+        &__header {
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+
+        &__card {
+            width: 100%;
+
+            &-details {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}

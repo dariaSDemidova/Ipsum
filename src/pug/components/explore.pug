@@ -1,0 +1,12 @@
+include search.pug
+
+section.explore 
+    .container
+        .explore__white-block
+            .explore__image
+                img(src='img/magnifying-glass.svg', alt='magnifying glass')
+        .explore__main
+            .explore__wrapper
+                h4.explore__title Explore a job now!
+                p.explore__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus pharetra cursus. Suspendisse sodales porta leo, ac placerat ex pretium quis.
+        +search('explore__search')

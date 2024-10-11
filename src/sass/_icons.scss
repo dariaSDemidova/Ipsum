@@ -1,0 +1,23 @@
+.companies__icon,
+.jobs__icon {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.membership__icon {
+    padding: 15px;
+    height: auto;
+    display: block;
+}
+
+
+.icon-hover {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+
+    &:hover {
+        fill: $royal-blue;
+        stroke: $royal-blue;
+    }
+}

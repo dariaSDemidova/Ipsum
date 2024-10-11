@@ -1,0 +1,14 @@
+include news-card.pug
+include controls.pug
+
+section.news 
+    .container 
+        .news__header 
+            h3.news__title Get the latest news about jobs!
+            +controls('news__controls')
+        .news__cards.cards
+            +newsCard('img/news1.svg', 'news', 'Resources', 'Finding employees in the gig economy', 'October 24, 2022')
+            +newsCard('img/news2.svg', 'news', 'Education', 'How to make a great first impression everytime', 'October 24, 2022')
+            +newsCard('img/news3.svg', 'news', 'Trends', 'Find out the best paying careers in 2022', 'October 24, 2022')
+            +newsCard('img/news4.svg', 'news', 'Careers', 'Ten things to nail your next job Interview', 'March 24, 2021')
+            

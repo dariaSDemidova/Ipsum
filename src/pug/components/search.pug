@@ -1,0 +1,6 @@
+mixin search(className)
+    form.search(class=className)
+        .search__wrapper
+            +icon('search', '24', '24', 'icon-hover')
+            input.search__input(type="text", placeholder="Search...")
+        button.search__button Search

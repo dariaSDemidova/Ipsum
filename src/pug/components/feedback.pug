@@ -1,0 +1,22 @@
+include controls.pug
+
+section.feedback 
+    .feedback__subtitle TESTIMONIAL
+    .feedback__container
+        h3.feedback__title See what users say about our job platform
+        .feedback__wrapper
+            .feedback__item
+                .feedback__left 
+                    .feedback__info
+                        p.feedback__text 
+                            | “Lorem ipsum dolor sit amet,  
+                            br
+                            | consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et, efficitur tortor. Fusce vel convallis magna”
+                        p.feedback__author David Sinclair - Senior Frontend Developer
+                    .feedback__buttons
+                        button.feedback__button
+                        +controls('feedback__controls')
+                .feedback__right 
+                    .feedback__image
+                        img(src='img/david.svg', alt='man')
+                        

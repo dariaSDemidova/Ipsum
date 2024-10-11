@@ -1,0 +1,19 @@
+mixin jobCard(iconType, company, date, title, tag1, tag2, city, salary)
+    .jobs__card
+        .jobs__card-company
+            .jobs__card-company-image
+                if iconType === 'image'
+                    img.jobs__icon(src=company.icon, alt=company.name)
+                else
+                    svg.icon.jobs__icon
+                        use(href=`icons/icons.svg#icon-${company.icon}`)
+            .jobs__card-company-text
+                p.jobs__card-company-title= company.name
+                p.jobs__card-company-date= date
+        h6.jobs__card-title= title
+        .jobs__card-tags
+            p.jobs__card-tag.blue= tag1
+            p.jobs__card-tag.peach= tag2
+        .jobs__card-details
+            .jobs__card-details-city= city
+            .jobs__card-details-salary= salary

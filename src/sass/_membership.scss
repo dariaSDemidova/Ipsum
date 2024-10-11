@@ -1,0 +1,101 @@
+.membership {
+    padding: 64px 0;
+
+    &__wrapper {
+        display: flex;
+        gap: 104px;
+    }
+
+    &__image {
+        width: 518px;
+        height: 540px;
+        overflow: hidden;
+    }
+
+    &__inscription {
+        @include font('Inter', 14px, 400, 16.8px, 0);
+        text-align: center;
+        color: $bright-gray;
+        background-color: $athens-gray;
+        margin: 0 76px;
+        padding: 15px;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%);
+    }
+
+    &__right {
+        margin: 24px 0;
+    }
+
+    &__subtitle {
+        display: none;
+    }
+
+    &__title {
+        @include h3;
+    }
+
+    &__text {
+        @include paragraph-regular;
+        padding: 32px 0;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__card {
+        display: flex;
+        background-color: $athens-gray;
+        padding: 16px;
+        gap: 16px;
+
+        &-image {
+            border: 1px solid $gray;
+            width: 56px;
+            height: 56px;
+            background-color: $white;
+
+            img {
+                padding: 16px;
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        &-title {
+            @include paragraph-regular;
+            font-weight: 500;
+            padding-bottom: 3px;
+        }
+
+        &-text {
+            @include paragraph-small;
+            color: $shuttle-gray;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .membership {
+        padding: 32px 0;
+        &__left {
+            display: none;
+        }
+        &__right {
+            margin: 0;
+        }
+        &__subtitle {
+            display: block;
+            @include detail;
+            color: $royal-blue;
+            padding-bottom: 11px;
+        }
+        &__text {
+            padding: 23px 8px 44px 0;
+        }
+    }
+}

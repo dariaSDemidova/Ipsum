@@ -1,0 +1,16 @@
+include company-card.pug
+include controls.pug
+
+section.companies
+    .container
+        .companies__header
+            .companies__info
+                h3.companies__title Work with exciting companies
+                p.companies__text Discover more than 1,600 open positions
+            +controls('companies__controls')
+        .companies__cards.cards
+            +card('dribble', 'Dribble', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '65 Employees')
+            +card('paypal', 'Paypal', 'Vivamus at dui mollis metus gravida tristique.', '6000 Employees')
+            +card('spotify', 'Spotify', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2000 Employees')
+            +card('slack-icon', 'Slack', 'Vivamus at dui mollis metus gravida tristique.', '400 Employees')
+            

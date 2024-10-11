@@ -1,0 +1,18 @@
+.controls {
+    display: flex;
+    gap: 22px;
+}
+
+.prev {
+    @include button(48px);
+    @include outline-button;
+    height: 48px;
+    background: url('/icons/arrow-left.svg') $white no-repeat center;
+}
+
+.next {
+    @include button(48px);
+    @include outline-button;
+    height: 48px;
+    background: url('/icons/arrow-right.svg') $white no-repeat center;
+}

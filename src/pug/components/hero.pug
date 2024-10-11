@@ -1,0 +1,25 @@
+include search.pug
+include icons.pug
+
+section.hero 
+    .container
+        .hero__header 
+            .hero__header-left 
+                .hero__header-badge 
+                    .hero__header-new New
+                    .hero__header-subtitle Stay connected to get upcoming jobs
+                h2.hero__header-title Find the most exciting jobs in tech
+            .hero__header-right  
+                p.hero__header-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et. Sign in or sign up to get started!
+        .hero__main 
+            +search('hero__main-search')
+            picture.hero__main-banner
+                source(media="(max-width: 425px)", srcset="img/banner-mobile.svg")
+                img(src="img/banner.svg", alt="banner")
+        .hero__bottom
+            +icon('opentable', '172', '50', 'icon-hover')
+            +icon('hubspot', '172', '50', 'icon-hover')
+            +icon('amazon', '172', '50', 'icon-hover')
+            +icon('shopify', '172', '50', 'icon-hover')
+            +icon('slack', '172', '50', 'icon-hover')
+            +icon('dropbox', '172', '50', 'icon-hover')

@@ -1,0 +1,118 @@
+.feedback {
+    background-color: $athens-gray;
+    padding: 64px 480px;
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
+    }
+
+    &__subtitle {
+        display: none;
+    }
+
+    &__title {
+        max-width: 464px;
+        @include h3;
+        text-align: center;
+    }
+
+    &__item {
+        display: flex;
+        gap: 142px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 450px;
+    }
+
+    &__text {
+        @include font('Inter', 24px, 500, 33.6px, -0.47999998927116394px);
+        color: $bright-gray;
+        padding-bottom: 23px;
+    }
+
+    &__author {
+        @include paragraph-regular;
+        color: $royal-blue;
+    }
+
+    &__image {
+        width: 384px;
+        height: 439px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__button {
+        display: none;
+    }
+
+    &__controls {
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .feedback {
+        padding: 32px 19px;
+        &__container {
+            gap: 72px;
+        }
+        &__subtitle {
+            display: block;
+            @include detail;
+            text-align: center;
+            color: $royal-blue;
+            margin-bottom: 12px;
+        }
+        &__title {
+            padding: 0 14px;
+        }
+        &__image {
+            display: none;
+        }
+        &__item {
+            gap: 0;
+        }
+
+        &__left {
+            width: 340px;
+            height: 357px;
+        }
+
+        &__info {
+            order: 2;
+        }
+        &__text {
+            padding-bottom: 44px;
+            max-width: 325px;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 44px;
+        }
+
+        &__button {
+            display: block;
+            @include button(72px);
+            height: 72px;
+            @include outline-button;
+            background: url('/icons/monkey.svg') $white no-repeat center;
+        }
+    }
+}

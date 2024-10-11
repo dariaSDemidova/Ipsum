@@ -1,0 +1,17 @@
+include job-card.pug
+
+section.jobs 
+    .container
+        .jobs__header
+            .jobs__info
+                h3.jobs__title Explore the latest job openings
+                p.jobs__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et, efficitur tortor. Fusce vel convallis magna.
+            button.jobs__button See All Jobs
+        .jobs__cards
+            +jobCard('icon', { icon: 'dribble', name: 'Dribble' }, 'October 25, 2022', 'Front End Developer', 'Marketing', 'Part Time', 'San Antonio', '$ 130k-160k')
+            +jobCard('icon', { icon: 'dribble', name: 'Dribble' }, 'October 25, 2022', 'Backend Developer', 'Design', 'Full Time', 'Dallas', '$ 50k-70k')
+            +jobCard('image', { icon: 'icons/tokopedia.svg', name: 'Tokopedia' }, 'March 30, 2021', 'Scrum Master', 'Marketing', 'Part Time', 'San Antonio', '$ 130k-160k')
+            +jobCard('icon', { icon: 'facebook', name: 'Facebook' }, 'March 30, 2021', 'Lead Technical Architect', 'Technology', 'Full Time', 'Melbourne', '$ 210k-240k')
+            +jobCard('icon', { icon: 'spotify', name: 'Spotify' }, 'March 30, 2021', 'Digital Media Strategist', 'Business', 'Casual', 'New York', '$ 50k-70k')
+            +jobCard('icon', { icon: 'paypal', name: 'Paypal' }, 'March 30, 2021', 'Systems Administrator', 'Business', 'Casual', 'California', '$ 40k-50k')
+            

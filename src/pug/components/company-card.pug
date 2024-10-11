@@ -1,0 +1,10 @@
+mixin card(icon, title, text, tag)
+    .companies__card.card
+        .companies__card-header
+            .companies__card-image
+                svg.icon.companies__icon
+                    use(href=`icons/icons.svg#icon-${icon}`)
+            p.companies__card-title= title
+        p.companies__card-text= text
+        p.companies__card-tag= tag
+        
