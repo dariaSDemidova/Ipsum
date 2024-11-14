@@ -62,6 +62,10 @@
             object-fit: cover;
             display: block;
             padding-top: 34px;
+
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -73,6 +77,34 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .hero {
+        &__main {
+            padding-bottom: 30px;
+            &-banner {
+                height: auto;
+            }
+        }
+        &__bottom {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        &__header {
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__main {
+            &-search {
+                width: 100%;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 425px) {
     .hero {
@@ -101,7 +133,7 @@
         }
 
         &__bottom {
-            margin-top: 32px;
+            margin-top: 96px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-items: center;
@@ -110,6 +142,14 @@
 
         &__icon {
             padding: 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        &__bottom {
+            margin-top: 32px;
         }
     }
 }

@@ -21,3 +21,9 @@
         stroke: $royal-blue;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .icon-hover {
+        width: 146px;
+    }
+}

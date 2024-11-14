@@ -65,6 +65,24 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .feedback {
+        padding: 32px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback {
+        padding: 32px 50px;
+        &__item {
+            gap: 0;
+        }
+        &__left {
+            width: 300px;
+        }
+    }
+}
+
 @media screen and (max-width: 425px) {
     .feedback {
         padding: 32px 19px;

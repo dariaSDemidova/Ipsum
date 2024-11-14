@@ -136,6 +136,13 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .jobs {
+        &__card {
+            width: calc((100% - 32px) / 2);
+        }
+    }
+}
 
 
 @media screen and (max-width: 425px) {

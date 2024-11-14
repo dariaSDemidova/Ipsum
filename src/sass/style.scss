@@ -19,6 +19,12 @@ body {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .container {
         padding: 0 16px;
